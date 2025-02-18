@@ -1,7 +1,6 @@
-from agent import Agent
+from longchain import run
 def main():
-    agent = Agent()
-    agent.run()
+    run()
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,7 @@
 import os
 
 import langchain_core.tools
+from dotenv import load_dotenv
 from langchain_core.tools import Tool
 from langchain_google_community import GoogleSearchAPIWrapper
 
@@ -15,8 +16,7 @@ def google_search(
     Parameters:
     - message (str): The search query.
     """
-    os.environ["GOOGLE_CSE_ID"] = "a0c653f31e9cc438a"
-    os.environ["GOOGLE_API_KEY"] = "AIzaSyClkPd2OpSgc3EkKIlRvMeBHkVyfYTpsO4"
+    load_dotenv()
     search = GoogleSearchAPIWrapper()
 
     tool = Tool(

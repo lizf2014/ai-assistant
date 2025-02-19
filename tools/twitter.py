@@ -7,7 +7,6 @@ from requests_oauthlib import OAuth1Session
 
 
 def get_oauth():
-    load_dotenv()
     oauth = OAuth1Session(
         client_key=os.getenv("TWITTER_CLIENT_KEY"),
         client_secret=os.getenv("TWITTER_CLIENT_SECRET"),

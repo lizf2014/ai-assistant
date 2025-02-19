@@ -16,7 +16,6 @@ def google_search(
     Parameters:
     - message (str): The search query.
     """
-    load_dotenv()
     search = GoogleSearchAPIWrapper()
 
     tool = Tool(

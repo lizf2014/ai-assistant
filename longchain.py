@@ -12,6 +12,7 @@ from tools.twitter import post_tweet
 
 def run():
     print("Running start")
+    load_dotenv()
 
     chat_llm = get_chat_llm()
 
@@ -27,7 +28,6 @@ def run():
 
 
 def get_chat_llm():
-    load_dotenv()
     chat_llm = ChatOpenAI(
         api_key=os.getenv("API_KEY"),
         base_url=os.getenv("BASE_URL"),

@@ -28,7 +28,6 @@ def search_and_contents(
     - exclude_text (list[str], optional): Exclude results containing these phrases.
     """
 
-    load_dotenv()
     exa = Exa(api_key=os.getenv("EXA_API_KEY"))
     return exa.search_and_contents(
         query,
@@ -62,7 +61,6 @@ def find_similar_and_contents(
     - start_published_date (str, optional): Restrict to documents published after this date (YYYY-MM-DD).
     - end_published_date (str, optional): Restrict to documents published before this date (YYYY-MM-DD).
     """
-    load_dotenv()
     exa = Exa(api_key=os.getenv("EXA_API_KEY"))
     return exa.find_similar_and_contents(
         url,
